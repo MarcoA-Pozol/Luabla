@@ -1,0 +1,75 @@
+{% extends 'layouts/cards_base.html' %}
+
+{% block cards_content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/create_card.css' %}">
+    
+    <div class="title">
+        <h2>FlashCards</h2>
+        <span><b>🛈</b> You can create flashcards for new Deck, or add new cards to your existing cards Deck</span>
+    </div>
+
+    {% if decks %}
+        <div class="card-formulary">
+            <h3>Card 🡃</h3>
+            <form method="post" action="{% url 'ACTION_add_card' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{card_form.title.label_tag}}
+                {{card_form.title}}
+
+                {{card_form.content.label_tag}}
+                {{card_form.content}}
+
+                {{card_form.group.label_tag}}
+                {{card_form.group}}
+
+                {{card_form.card_image.label_tag}}
+                {{card_form.card_image}}
+
+                <button type="submit">Add</button>
+            </form>
+        </div>
+
+        <div class="deck-formulary">
+            <h3>Deck 🡃</h3>
+            <form method="post" action="{% url 'ACTION_add_deck' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{deck_form.title.label_tag}}
+                {{deck_form.title}}
+
+                {{deck_form.description.label_tag}}
+                {{deck_form.description}}
+
+                {{deck_form.is_shareable.label_tag}}
+                {{deck_form.is_shareable}}
+
+                {{deck_form.image.label_tag}}
+                {{deck_form.image}}
+
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    {% else %}
+        <h2 id="no_deck_warning">⚠️ Create a Deck first to add cards ⚠️</h2>
+
+        <div class="deck-formulary">
+            <h3>Deck 🡃</h3>
+            <form method="post" action="{% url 'ACTION_add_deck' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{deck_form.title.label_tag}}
+                {{deck_form.title}}
+
+                {{deck_form.description.label_tag}}
+                {{deck_form.description}}
+
+                {{deck_form.is_shareable.label_tag}}
+                {{deck_form.is_shareable}}
+
+                {{deck_form.image.label_tag}}
+                {{deck_form.image}}
+
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    {% endif %}
+{% endblock %}

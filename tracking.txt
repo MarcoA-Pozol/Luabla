@@ -1,0 +1,65 @@
+Symbols = {✅:"Completed", ⚙️:"In Progress", ❌:"Not Started"}
+
+11 / 07 2024
+-Makemigrations and Migrate Session App Model(User), this have to be migrated first than General Initial Migrations for the Project (First step). ✅
+-Migrate and Makemigrations for general Django models (Second step). ✅
+-Implement the Registration View functionality to create new User. ✅
+-Implement Login View and functionality to give access to "Riddles" page to the authenticated User. ✅
+-Implement URL, View, Template and Style files from "Riddles" page. ✅
+-Set access to "Riddles" page as a only for authenticated users using "@loggin_required" decorator. ✅
+
+14 / 07 / 2024
+-Implement views(empty) and urls from all initial features from the app. ✅
+-Create and Implement(install on settings.py each app) all initial features Apps. ✅
+-Implement the first feature app(Reading) template, view, and url to prepare it to the functionalities development. ✅
+-Implement 'Story', a Table for the DB to save all short stories for the 'Reading' App. ✅
+-Show a list selection button to chose the short story(by title) to be choosen by the user. ✅
+-Display the choosen story in a medium screen on the page to invite the user to start to read it. ✅
+-Implement the initial CSS and HTML for the 'Reading' page. ✅
+
+20 / 07 / 2024
+-Implement Cards/ base html for the view. ✅
+-Implement Cards/ base css for the view. ✅
+-Implement 2 links in Cards/ base for cards/create/ and cards/read/ urls. ✅
+-Implement Cards/create/ view. ✅
+-Implement Cards/create/ url. ✅
+-Implement Cards/create/ formulary. ✅
+-Implement Card model with fields: title, content, group, last_review, user(foreign key(authenticated user)), created_at (auto_now_add=True) ✅
+
+25 / 07 / 2024
+-Create Cards Form. ✅
+-Create Cards Model and Deck Model, and their administration models. ✅
+-Implement CSS for Cards creation formulary template.  ✅
+
+27 / 07 / 2024
+-Comprobe Card and Deck creaton by formulary works correctly. ✅
+-Fix the deploy of all decks from all users as options in group field by Card formulary on Cards app view and formulary. ✅
+#I have fixed an issue when I am trying to create new Card in Cards app, then if another User had created another in the past, then the Deck to be chosen field was deploying all User´s Decks from, then I only would to let choose avoid authenticated User decks if they have one, sure, then I have setted the init method from the formulary to admit user as argument to get the requested user when the view were loaded, then it could display only Decks from authenticated user using a conditional in the Card formulary init method and some configurations. ✅
+
+
+28 / 07 / 2024
+-Implement style and structure for "Discover Decks" page.
+-Show every Deck in "Discover Decks" page that is_shareable=True.
+-Implement the first structure to display saved or owned Decks in "Review" page, own Decks and aquired Decks.
+
+13 / 08 / 2024
+-Implement "developing" branch for git repository. ✅
+-Implement protected API View to display the list of users and make it only available to super users and for Luabla user in developing mode, the password field must be not available to be showed. ✅
+-Implement API endpoint to create users, only available for super users. ✅
+
+14 / 08 / 2024
+-Implement API endpoint to create decks with JWT authorization, this does not need superuser permission.
+-Implement API endpoint to create cards with JWT authorization, this does not need superuser permission.
+
+15 / 08 / 2024
+-Customize the API create user view to be able to admit the required in Register formulary fields during user creation.
+-Implement API View with PUT method for users updating, include JWT authorization and superuser permissions.
+-Implement API View with DELETE method for users deleting, include JWT authorization and superuser permissions. 
+
+
+
+⚙️⚙️⚙️⚙️ ...To complete in the future... ⚙️⚙️⚙️⚙️
+-Create User vocabulary form to save it using the suggested translation(Google Translator), or provide it by itself or add a phase to it to remember that word on repass.
+-Implement the "add to vocabulary" functionality using JS.
+-Implement "User_Vocabulary" model.
+-Fix logout displaying style on base template(header menu).

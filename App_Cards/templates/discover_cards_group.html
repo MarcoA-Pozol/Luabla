@@ -1,0 +1,26 @@
+{% extends 'layouts/cards_base.html' %}
+
+{% block cards_content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/discover_cards_group.css' %}">
+
+    {% if decks %}
+        <div class="decks-block">
+            {% for deck in decks %}
+                <div class="deck">
+                    <h3>{{deck.title}}</h3>
+                    <h5>{{deck.author}}</h5>
+                    {% if deck.image %}
+                        <img src="{{ deck.image.url }}" alt="{{ deck.title }} image">
+                    {% else %}
+                        <img src="{% static "images/default_deck_image.jpg" %}" alt="{{ deck.title }} image">
+                    {% endif %}
+                    <p>{{deck.description}}</p>
+                    <span>Downloads <b>{{deck.downloads}}</b></span>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+            <p id="no_decks">There are not any card groups to show</p>
+    {% endif %}
+{% endblock %}

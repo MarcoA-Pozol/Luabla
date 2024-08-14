@@ -1,0 +1,32 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/reading.css' %}">
+
+    <h5>Hello READING!</h5>
+    
+    <form method="get" action="">
+        <label for="level-select">Choose Level</label>
+        <select name="english_level" id="english_level-select" onchange="this.form.submit()">
+            <option value="">Select a level</option>
+            {% for level in english_levels %}
+                <option value="{{ level }}" {% if level == selected_english_level %}selected{% endif %}>{{ level }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="title-select">Choose a title:</label>
+        <select name="title" id="title-select" onchange="this.form.submit()">
+            <option value="">Select a title</option>
+            {% for title in titles %}
+                <option value="{{ title }}" {% if title == selected_title %}selected{% endif %}>{{ title }}</option>
+            {% endfor %}
+        </select>
+    </form>
+    
+    {% if story %}
+        <h2>{{ story.title }}</h2>
+        <img src="{{ story.front_image.url }}" alt="{{ story.title }}">
+        <p>{{ story.content }}</p>
+    {% endif %}
+{% endblock %}

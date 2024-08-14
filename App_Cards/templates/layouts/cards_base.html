@@ -1,0 +1,19 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/cards_base.css' %}">
+
+    <div class="cards-menu">
+        <a class="cards-menu back" href="{% url 'cards' %}">Back</a>
+        <a class="cards-menu review" href="{% url 'review_cards' %}">Review</a>
+        <a class="cards-menu discover" href="{% url 'discover_decks' %}">Discover</a>
+        <a class="cards-menu create" href="{% url 'create_card' %}">Create</a>
+    </div>
+    
+    <div>
+        {% block cards_content %}
+            <!-- Changeable content -->
+        {% endblock %}
+    </div>
+{% endblock %}

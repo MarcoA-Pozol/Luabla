@@ -1,0 +1,69 @@
+/*If decks*/
+.decks-block{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    border: 3px solid rgb(203, 202, 209);
+    width: 98%;
+    margin-left: 1%;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+.deck{
+    margin-top: 10px;
+    width: 46%;
+    margin-left: 2%;
+    background-color: rgb(5, 8, 43);
+    color: white;
+    border: 2px solid rgb(15, 93, 156);
+    border-radius: 5px;
+    text-shadow: 3px 3px 5px 5px rgb(10, 40, 120);
+    font-family: monospace;
+}
+.deck h3{
+    text-align: center;
+    font-size: 22px;
+}
+.deck h5{
+    font-size: 18px;
+    color: rgb(90, 120, 190);
+    text-align: center;
+    border-bottom: 1px solid rgb(190, 200, 210);
+    margin-bottom: 2px;
+}
+.deck img{
+    margin-top: 0;
+    width: 100%;
+    min-height: 40%;
+}
+.deck p{
+    margin-top: 0;
+    background-color: rgb(20, 30, 40);
+    padding-block: 5px;
+    padding-inline: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+.deck span{
+    margin-left: 5px;
+    font-size: 16px;
+    padding-inline: 2px;
+    border-radius: 4px;
+}
+.deck b{
+    color: rgb(170, 40, 10);
+}
+
+
+
+/*If not decks*/
+#no_decks{
+    color: black;
+    font-family: monospace;
+    font-size: 36px;
+    text-align: center;
+    padding: 5% 30%;
+    border-block: 12px solid rgb(190, 200, 210);
+    margin-top: 0;
+}

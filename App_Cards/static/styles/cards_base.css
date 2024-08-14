@@ -1,0 +1,57 @@
+/* Cards Menu */
+.cards-menu {
+    display: inline-flex;
+    width: 100%;
+    border-top: 2px solid rgb(136, 136, 163);
+}
+
+.cards-menu a {
+    text-decoration: none;
+    color: white;
+    padding-block: 10px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 20px;
+    transition: background-color 0.3s, text-shadow 0.3s;
+}
+
+.cards-menu .back {
+    background-color: rgb(13, 9, 26);
+    width: 6%;
+    padding-left: 2%;
+    border-inline: 1px solid white;
+}.cards-menu .back:hover{
+    background-color: rgb(32, 26, 51);
+    text-shadow: 1px 1px 1px rgb(250, 250, 250);
+}
+
+.cards-menu .review {
+    background-color: rgb(2, 6, 26);
+    width: 30%;
+    padding-left: 10%;
+    border-inline: 1px solid white;
+}.cards-menu .review:hover {
+    background-color: rgb(90, 120, 190);
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+
+.cards-menu .discover {
+    background-color: rgb(2, 6, 26);
+    width: 30%;
+    padding-left: 10%;
+    border-inline: 1px solid white;
+}.cards-menu .discover:hover {
+    background-color: rgb(90, 120, 190);
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+
+.cards-menu .create {
+    background-color: rgb(2, 6, 26);
+    width: 30%;
+    padding-left: 10%;
+    border-inline: 1px solid white;
+}.cards-menu .create:hover {
+    background-color: rgb(90, 120, 190);
+    text-shadow: 1px 1px 1px rgb(250, 250, 250);
+}
+

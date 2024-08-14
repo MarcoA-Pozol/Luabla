@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+
+    <div class="button-container">
+        <a href="{% url 'cards' %}" class="feature-button cards">Cards</a>
+        <a href="{% url 'writing' %}" class="feature-button writing">Writing</a>
+        <a href="{% url 'listening' %}" class="feature-button listening">Listening</a>
+        <a href="{% url 'vocabulary' %}" class="feature-button vocabulary">Vocabulary</a>
+        <a href="{% url 'speaking' %}" class="feature-button speaking">Speaking</a>
+        <a href="{% url 'riddles' %}" class="feature-button riddles">Riddles</a>
+        <a href="{% url 'reading' %}" class="feature-button reading">Reading</a>
+        <button class="feature-button comming_soon">📆Coming soon!</button>
+    </div>
+    
+
+    
+{% endblock %}

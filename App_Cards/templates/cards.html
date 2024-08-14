@@ -1,0 +1,20 @@
+{% extends 'layouts/cards_base.html' %}
+
+{% block cards_content %}
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'styles/cards.css' %}">
+
+    <div class="cards-content">
+        <div class="card">
+            <h3>Card Title</h3>
+            <p>This is a sample card. Cards are used to review and create vocabulary words, phrases, and other learning materials.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="card">
+            <h3>Another Card</h3>
+            <p>Cards can contain text, images, and links. Customize them to fit your learning style and needs.</p>
+            <a href="#">Learn More</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,68 @@
+/* body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+} */
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.feature-button {
+    font-size: 1.5rem;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.feature-button:hover {
+    transform: scale(1.05);
+}
+
+.cards {
+    background-color: #4CAF50; 
+}
+
+.writing {
+    background-color: #2196F3; 
+}
+
+.listening {
+    background-color: #FF9800; 
+}
+
+.vocabulary {
+    background-color: #9C27B0; 
+}
+
+.speaking {
+    background-color: #F44336; 
+}
+
+.riddles {
+    background-color: #5921f3;
+}
+
+.reading {
+    background-color: #FF3BC4; 
+}
+
+.comming_soon {
+    background-color: #c7c413; 
+    color: black;
+}

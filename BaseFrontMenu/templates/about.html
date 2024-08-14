@@ -1,0 +1,34 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/about.css' %}">
+
+    <div class="about-container">
+        <h1>About Us</h1>
+        <p>Welcome to Luabla!, your go-to app for learning and practicing English. Our mission is to help language learners of all levels improve their skills through interactive lessons, vocabulary exercises, and practice quizzes.</p>
+        
+        <h2>Our Mission</h2>
+        <p>Our mission is to provide an accessible, effective, and enjoyable way for people to learn and practice languages. We believe that everyone should have the opportunity to communicate confidently in a new language.</p>
+        
+        <h2>Features and Benefits</h2>
+        <ul>
+            <li>Interactive Lessons: Engage with our comprehensive lessons designed to cover all aspects of language learning.</li>
+            <li>Vocabulary Building: Expand your vocabulary with targeted exercises.</li>
+            <li>Practice Quizzes: Test your knowledge and track your progress with quizzes.</li>
+        </ul>
+        
+        <h2>Future Plans</h2>
+        <p>We are excited to expand our offerings beyond English. Stay tuned for new language courses, including Spanish, French, and German.</p>
+        
+        <h2>Meet the Team</h2>
+        <p>LanguageMaster was created by a passionate team of language enthusiasts and developers. Our goal is to make language learning accessible and fun for everyone.</p>
+        <div class="team-member">
+            <h3>Marco Antonio</h3>
+            <p>Founder & Lead Developer</p>
+        </div>
+
+        <h2>Contact Us</h2>
+        <p>If you have any question, please, contact with Luabla support team at luabla_learning@gmail.com</p>
+    </div>
+{% endblock %}
