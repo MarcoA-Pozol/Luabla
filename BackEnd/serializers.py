@@ -1,5 +1,6 @@
 from rest_framework.serializers import Serializer, ModelSerializer
 from Session.models import User
+from App_Cards.models import Deck, Card
 
 # User model serializers
 class UserSerializer(ModelSerializer):
@@ -27,3 +28,20 @@ class CreateUserSerializer(ModelSerializer):
         model = User
         fields = ['username', 'first_name', 'last_name', 'email', 'password']
         
+        
+# App Cards Serializers
+class CreateDeckSerializer(ModelSerializer):
+    """
+        Serializer to create new deck.
+    """
+    class Meta:
+        model = Deck
+        fields = ['title',  'author', 'description', 'is_shareable']
+        
+class CreateCardSerializer(ModelSerializer):
+    """
+        Serializer to create new card.
+    """
+    class Meta:
+        model = Card
+        fields = ['title', 'author', 'content', 'group']
