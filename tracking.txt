@@ -48,15 +48,15 @@ Symbols = {✅:"Completed", ⚙️:"In Progress", ❌:"Not Started"}
 -Implement API endpoint to create users, only available for super users. ✅
 
 14 / 08 / 2024
--Implement API endpoint to create decks with JWT authorization, this does not need superuser permission.
--Implement API endpoint to create cards with JWT authorization, this does not need superuser permission.
+-Implement API endpoint to create decks with JWT authorization, this does not need superuser permission. ✅
+-Implement API endpoint to create cards with JWT authorization, this does not need superuser permission. ✅
 
 15 / 08 / 2024
--Implement API endpoint to list decks with JWT authorization, does not need superuser permissions.
--Implement API endpoint to list cards with JWT authorization, does not need superuser permissions.
--Customize the API create user view to be able to admit the required in Register formulary fields during user creation.
--Implement API View with PUT method for users updating, include JWT authorization and superuser permissions.
--Implement API View with DELETE method for users deleting, include JWT authorization and superuser permissions. 
+-Implement API endpoint to list decks with JWT authorization, does not need superuser permissions. ✅
+-Implement API endpoint to list cards with JWT authorization, does not need superuser permissions. ✅
+-Customize the API create user view to be able to admit the required in Register formulary fields during user creation. ✅
+-Implement API View with PUT and PATCH methods for users updating, include JWT authorization and superuser permissions.  ✅
+-Implement API View with DELETE method for users deleting, include JWT authorization and superuser permissions.  ✅ 
 
 
 
