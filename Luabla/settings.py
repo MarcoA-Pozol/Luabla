@@ -111,8 +111,12 @@ WSGI_APPLICATION = 'Luabla.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Luabla_DB',
+        'USER': 'postgres',
+        'PASSWORD': 'mach1029',
+        'HOST': 'Luabla_DB', # Use the service from docker container from docker-compose service for db.
+        'PORT': '5432',
     }
 }
 

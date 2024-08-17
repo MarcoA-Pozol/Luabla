@@ -30,6 +30,7 @@ class CreateUserSerializer(ModelSerializer):
         
         
 # App Cards Serializers
+# Deck serializers
 class CreateDeckSerializer(ModelSerializer):
     """
         Serializer to create new deck.
@@ -37,7 +38,8 @@ class CreateDeckSerializer(ModelSerializer):
     class Meta:
         model = Deck
         fields = ['title',  'author', 'description', 'is_shareable']
-        
+
+# Cards serializers
 class CreateCardSerializer(ModelSerializer):
     """
         Serializer to create new card.
