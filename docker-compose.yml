@@ -5,11 +5,11 @@ services:
     build: .
     command: sh -c "python manage.py migrate --noinput && python manage.py collectstatic --noinput && python manage.py runserver 0.0.0.0:8700"
     volumes:
-      - .:/code/Luabla
+      - .:/code/
     ports:
       - "8700:8700"
     depends_on:
-      - luabla_db  # Changed from Luabla_DB to luabla_db
+      - luabla_db
     environment:
       - DEBUG=1
       - DB_NAME=Luabla_DB
@@ -17,6 +17,8 @@ services:
       - DB_PASSWORD=mach1029
       - DB_HOST=luabla_db
       - DB_PORT=5432
+    networks:
+      - luabla_network
 
   luabla_db:
     image: postgres:13
@@ -28,6 +30,11 @@ services:
       POSTGRES_DB: Luabla_DB
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: mach1029
+    networks:
+      - luabla_network
+
+networks:
+  luabla_network:
 
 volumes:
   postgres_data:

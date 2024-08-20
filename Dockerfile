@@ -2,16 +2,25 @@
 FROM python:3.10-slim
 
 # Set the working directory in the container
-WORKDIR /code/Luabla
+WORKDIR /code/
 
-# Copy the requirements file into the container at /code/Luabla
-COPY requirements.txt /code/Luabla/
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    gcc \
+    && apt-get clean
+
+# Copy the requirements file into the container at /code/
+COPY requirements.txt /code/
 
 # Install any dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the entire project directory into the container at /code/Luabla
+# Copy the entire project directory into the container at /code/
 COPY . /code/
+
+# Static files - run collectstatic after the code has been copied and dependencies installed
+RUN python manage.py collectstatic --noinput
 
 # Make port 8700 available to the world outside this container
 EXPOSE 8700

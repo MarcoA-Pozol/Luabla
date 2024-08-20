@@ -3,4 +3,18 @@
 {% block cards_content %}
     {% load static %}
     <h2>Hello Review Cards!!!!</h2>
+
+    {% if own_decks %}
+        {% for own_deck in own_decks %}
+            {{ own_deck.title}}
+            {{ own_deck.content }}
+        {% endfor %}
+    {% endif %}
+
+    {% if decks %}
+        {% for deck in decks %}
+            {{ deck.title}}
+            {{ deck.content }}
+        {% endfor %}
+    {% endif %}
 {% endblock %}

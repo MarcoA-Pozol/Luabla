@@ -11,9 +11,10 @@ def cards(request):
 @login_required
 def review_cards(request):
     #Get self user decks and added decks from another user.
+    own_decks = Deck.objects.filter(author=request.user).all()
     decks = Deck.objects.filter(owners=request.user).all()
     
-    context = {'decks':decks}
+    context = {'decks':decks, 'own_decks': own_decks}
     return render(request, 'review_cards.html', context)
 
 @login_required
@@ -47,8 +48,8 @@ def discover_decks(request):
 def get_deck(request, deck_identifier):
     if request.method == "POST":
         user = request.user
-        deck = Deck.get(id=deck_identifier)
-        deck.add(owners=user)
+        deck = Deck.objects.get(id=deck_identifier)
+        deck.owners.add(user)
         return redirect('review_cards')
     else:
         return redirect('cards')

@@ -1,0 +1,38 @@
+/* styles/reading.css */
+h5 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    margin: 20px 0;
+    text-align: center;
+    color: black;
+}
+
+select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+h2 {
+    text-align: center;
+    color: #27cf21;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+p {
+    margin-top: 20px;
+    margin-left: 15%;
+    text-align: justify;
+    line-height: 1.6;
+    font-family: fantasy;
+    font-size: 20px;
+    color: black;
+    width: 70%;
+}

@@ -56,7 +56,7 @@ class ListDecksView(APIView):
         """
             Retrieve list of decks
         """
-        decks = Deck.objecst.all().values('id', 'title', 'author', 'description')
+        decks = Deck.objects.all().values('id', 'title', 'author', 'description')
         return Response(decks, status = status.HTTP_200_OK)
 
 class CreateDeckView(generics.CreateAPIView):
