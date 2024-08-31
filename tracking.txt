@@ -68,11 +68,14 @@ Symbols = {✅:"Completed", ⚙️:"In Progress", ❌:"Not Started"}
 -Make migrations to PostgreSQL DB and migrate. ✅
 
 19 / 08 / 2024
-Functionality: User want to add decks from another users to study it whenever they want.
-    -Implement the Initial HTML and CSS for the decks review page. ⚙️
+Functionality: User want to add decks from another users to study it.
+    -Implement the Initial HTML and CSS for the decks review page. ✅
     -Implement a button on every deck discovering to make it able to be added to our decks (For study, not as own). ✅
     -Implement add deck button functionality. ✅
     -Implement view, url and the neccesary to asure on click add deck button it can add the deck for our review page to be study. ✅
+
+30 / 08 / 2024
+-Ensure the own decks are not displayed to be added in discover page in cards app.
 
 ⚙️⚙️⚙️⚙️ ...To complete in the future... ⚙️⚙️⚙️⚙️
 -Create User vocabulary form to save it using the suggested translation(Google Translator), or provide it by itself or add a phase to it to remember that word on repass.

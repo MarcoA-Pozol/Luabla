@@ -1,0 +1,18 @@
+Symbols = {✅:"Completed", ⚙️:"In Progress", ❌:"Related Issue"}
+
+
+19 / 08 / 2024
+Functionality: User want to add decks from another users to study it.
+    -Implement the Initial HTML and CSS for the decks review page. ✅
+    -Implement a button on every deck discovering to make it able to be added to our decks (For study, not as own). ✅
+    -Implement add deck button functionality. ✅
+    -Implement view, url and the neccesary to asure on click add deck button it can add the deck for our review page to be study. ✅
+
+31 / 08 / 2024
+-Ensure owner decks are not displayed in "discover decks" page. ✅
+
+01 / 09 / 2024
+-Implement a "remove card" button to remove card from your study decks (Only available for decks from another users)
+-Implement the carroucel functionality to make the cards study easy and let it move from right to left as the time we study them.
+-Implement the CSS, HTML and JS for the cards study carroucel.
+-Implement the URL, View and the neccesary to study the cards.

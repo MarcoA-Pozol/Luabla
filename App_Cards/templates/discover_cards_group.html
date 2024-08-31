@@ -7,21 +7,23 @@
     {% if decks %}
         <div class="decks-block">
             {% for deck in decks %}
-                <div class="deck">
-                    <h3>{{deck.title}}</h3>
-                    <h5>{{deck.author}}</h5>
-                    {% if deck.image %}
-                        <img src="{{ deck.image.url }}" alt="{{ deck.title }} image">
-                    {% else %}
-                        <img src="{% static "images/default_deck_image.jpg" %}" alt="{{ deck.title }} image">
-                    {% endif %}
-                    <p>{{deck.description}}</p>
-                    <span>Downloads <b>{{deck.downloads}}</b></span>
-                    <form class="get_deck" method="POST" action="{% url 'ACTION_get_deck' deck.id %}">
-                        {% csrf_token %}
-                        <button type="submit">Add</button>
-                    </form>                    
-                </div>
+                {% if deck.author != user %}
+                    <div class="deck">
+                        <h3>{{deck.title}}</h3>
+                        <h5>{{deck.author}}</h5>
+                        {% if deck.image %}
+                            <img src="{{ deck.image.url }}" alt="{{ deck.title }} image">
+                        {% else %}
+                            <img src="{% static "images/default_deck_image.jpg" %}" alt="{{ deck.title }} image">
+                        {% endif %}
+                        <p>{{deck.description}}</p>
+                        <span>Downloads <b>{{deck.downloads}}</b></span>
+                        <form class="get_deck" method="POST" action="{% url 'ACTION_get_deck' deck.id %}">
+                            {% csrf_token %}
+                            <button type="submit">Add</button>
+                        </form>                    
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
     {% else %}

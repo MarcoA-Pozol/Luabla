@@ -2,19 +2,26 @@
 
 {% block cards_content %}
     {% load static %}
-    <h2>Hello Review Cards!!!!</h2>
+    <link rel="stylesheet" href="{% static 'styles/review_cards.css' %}">
+    <h2 id="title">Decks to review:</h2>
 
     {% if own_decks %}
         {% for own_deck in own_decks %}
-            {{ own_deck.title}}
-            {{ own_deck.content }}
+            <div class="deck">
+                <h3>{{ own_deck.title }}</h3>
+                <h4>{{ own_deck.description }}</h4>
+                <button>Study</button>
+            </div>
         {% endfor %}
     {% endif %}
 
     {% if decks %}
         {% for deck in decks %}
-            {{ deck.title}}
-            {{ deck.content }}
+            <div class="deck">
+                <h3>{{ deck.title}}</h3>
+                <h4>{{ deck.description }}</h4>
+                <button>Study</button>
+            </div>        
         {% endfor %}
     {% endif %}
 {% endblock %}

@@ -34,11 +34,11 @@ def create_card(request):
 
 @login_required
 def discover_decks(request):
-    #Get all cards groups from every author that are shareable.
-    # decks = Deck.objects.filter(is_shareable=True, author=request.user).all()
+    #Get all cards groups from every author that are shareable
+    user = request.user
     decks = Deck.objects.filter(is_shareable=True).all()
     
-    context = {'decks':decks}
+    context = {'decks':decks, 'user':user}
     return render(request, 'discover_cards_group.html', context)
 
 
